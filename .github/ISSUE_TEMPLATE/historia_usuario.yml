@@ -1,0 +1,63 @@
+name: Historia de usuario
+description: Una necesidad del usuario en el formato Como / quiero / para
+title: "HU: "
+labels: ["historia"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🎩 **Sombrero de PO.** Escribe la historia en lenguaje cotidiano, sin términos técnicos.
+        Los **puntos**, la **prioridad** y el **sprint** se ponen en los campos del Project, no aquí.
+  - type: input
+    id: rol
+    attributes:
+      label: Como (rol)
+      description: ¿Quién? Usa uno de los roles que definiste.
+      placeholder: "cliente frecuente"
+    validations:
+      required: true
+  - type: input
+    id: deseo
+    attributes:
+      label: Quiero (deseo)
+      description: ¿Qué? Empieza con un verbo de acción.
+      placeholder: "cancelar mi cita desde la app"
+    validations:
+      required: true
+  - type: input
+    id: beneficio
+    attributes:
+      label: Para (beneficio)
+      description: ¿Por qué? El valor que obtiene el rol.
+      placeholder: "no tener que llamar al negocio"
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Al menos 2. Son únicos de esta historia (la DoD aplica a todas).
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: checkboxes
+    id: invest
+    attributes:
+      label: Revisión INVEST
+      description: Marca solo lo que de verdad cumple. Si algo no se cumple, explícalo en las notas.
+      options:
+        - label: "I — Independiente: no depende de otra historia para entregarse"
+        - label: "N — Negociable: los detalles se pueden conversar"
+        - label: "V — Valiosa: le da valor al usuario o al cliente"
+        - label: "E — Estimable: el equipo puede ponerle puntos"
+        - label: "S — Pequeña: cabe en un sprint (no rebasa la carga máxima)"
+        - label: "T — Con pruebas: se puede comprobar con sus criterios de aceptación"
+  - type: textarea
+    id: notas
+    attributes:
+      label: Notas de la conversación
+      description: Detalles acordados, dudas del cliente, enlaces a bocetos o a historias relacionadas.
+    validations:
+      required: false

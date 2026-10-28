@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Base generada por metricas/cargar_tablero.py (se vuelve a crear desde el .tsv)
+metricas/*.db
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

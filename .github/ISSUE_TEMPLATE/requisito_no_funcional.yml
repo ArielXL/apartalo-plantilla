@@ -1,0 +1,58 @@
+name: Requisito no funcional
+description: Una restricción SMART sobre la calidad del sistema
+title: "RNF: "
+labels: ["rnf"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🎩 **Sombreros de PO y desarrollador.** Una restricción es una condición que define un límite de cumplimiento.
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de cualidad
+      options:
+        - Externa (Tabla 1)
+        - Interna (Tabla 3)
+    validations:
+      required: true
+  - type: input
+    id: cualidad
+    attributes:
+      label: Cualidad
+      description: Usa el nombre de la Tabla 1 o de la Tabla 3.
+      placeholder: "desempeño"
+    validations:
+      required: true
+  - type: textarea
+    id: restriccion
+    attributes:
+      label: Restricción SMART
+      description: Una o dos líneas, con un número medible.
+    validations:
+      required: true
+  - type: input
+    id: historia
+    attributes:
+      label: Historia que la justifica (Trazable)
+      description: Escribe # y el número del issue de la historia.
+      placeholder: "#4"
+    validations:
+      required: true
+  - type: checkboxes
+    id: smart
+    attributes:
+      label: Revisión SMART
+      options:
+        - label: "S — Específica"
+        - label: "M — Medible"
+        - label: "A — Alcanzable"
+        - label: "R — Relevante"
+        - label: "T — Trazable"
+  - type: textarea
+    id: comprobacion
+    attributes:
+      label: ¿Cómo se comprueba?
+      description: Externa → prueba práctica de la Tabla 2. Interna → práctica de la Tabla 4.
+    validations:
+      required: true
